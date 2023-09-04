@@ -4,7 +4,7 @@ metadata:
   name: jobtest
   annotations:
     argocd.argoproj.io/hook: PostSync
-    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
 spec:
   backoffLimit: 1
   completions: 1
@@ -12,6 +12,12 @@ spec:
     spec:
       containers:
       - name: jobtest
-        image: perl:5.34.0
-        command: ["perl", "-Mbignum=bpi", "-wle", "print bpi(2000)"]
+        image: busybox
+        command: ["/bin/sh", "-c", "env"]
+        env:
+        - name: LOG_LEVEL
+          valueFrom:
+            configMapKeyRef:
+              name: env-config
+              key: log_level
       restartPolicy: Never
