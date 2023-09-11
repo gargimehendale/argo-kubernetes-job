@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: jobtest
-        image: nginx
+        image: busybox
         command: ["echo", "job-test"] 
       restartPolicy: Never
 #        command: ["/bin/sh", "-c", "env"]
