@@ -17,7 +17,7 @@ spec:
             configMapKeyRef:
               name: docker-config
               key: image_name
-       restartPolicy: Never
+      restartPolicy: Never
 #        command: ["/bin/sh", "-c", "env"]
 #        env:
 #        - name: LOG_LEVEL
