@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: jobtest
+  name: test-job
   annotations:
     argocd.argoproj.io/hook: PostSync
     argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
@@ -12,11 +12,7 @@ spec:
     spec:
       containers:
       - name: jobtest
-        image: 
-          valueFrom:
-            configMapKeyRef:
-              name: docker-config
-              key: image_name
+        image: busybox
       restartPolicy: Never
 #        command: ["/bin/sh", "-c", "env"]
 #        env:
