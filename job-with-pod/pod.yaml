@@ -5,5 +5,5 @@ metadata:
 spec:
   containers:
   - name: test-container
-    image: busybox
+    image: nginx
     imagePullPolicy: IfNotPresent
