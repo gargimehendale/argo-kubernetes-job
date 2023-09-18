@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx
+  name: test-container
 spec:
   containers:
-  - name: nginx
-    image: nginx
+  - name: test-container
+    image: busybox
     imagePullPolicy: IfNotPresent
