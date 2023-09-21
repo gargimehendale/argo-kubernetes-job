@@ -13,6 +13,6 @@ spec:
       containers:
       - name: jobtest
         image: busybox
-        command: ["sleep", "3600"] 
+        command: ["sleep", "180"] 
       restartPolicy: Never
 
