@@ -2,8 +2,8 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   genarateName: test-job-
-  annotations:
-    argocd.argoproj.io/hook: Sync
+#  annotations:
+#    argocd.argoproj.io/hook: Sync
 #    argocd.argoproj.io/hook-delete-policy: HookSucceeded
 #BeforeHookCreation
 spec:
@@ -14,6 +14,6 @@ spec:
       containers:
       - name: jobtest
         image: busybox
-        command: ["sleep", "120"]
-#        command: ["echo", "job-test"] 
+#        command: ["sleep", "120"]
+        command: ["echo", "job-test"] 
       restartPolicy: Never
