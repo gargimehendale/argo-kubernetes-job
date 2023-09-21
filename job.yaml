@@ -14,5 +14,6 @@ spec:
       containers:
       - name: jobtest
         image: busybox
-        command: ["echo", "job-test"] 
+        command: ["sleep", "120"]
+#        command: ["echo", "job-test"] 
       restartPolicy: Never
