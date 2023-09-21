@@ -5,5 +5,5 @@ metadata:
 spec:
   containers:
   - name: test-container
-    image: nginx
+    image: tomcat
     imagePullPolicy: IfNotPresent
