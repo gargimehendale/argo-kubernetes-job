@@ -2,8 +2,8 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   generateName: job-test-
-  annotations:
-    argocd.argoproj.io/hook: Sync
+#  annotations:
+#    argocd.argoproj.io/hook: Sync
 #    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
 #    argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
